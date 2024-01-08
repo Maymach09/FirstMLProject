@@ -1,5 +1,6 @@
 import os
 import sys
+sys.path.append('C:/Users/Mayan/End2End Projects')  # Adjust the path accordingly
 import pandas as pd
 from src.exception import CustomException
 from src.logger import logging
