@@ -1,12 +1,15 @@
 import os
 import sys
-sys.path.append('C:/Users/Mayan/End2End Projects')  # Adjust the path accordingly
+sys.path.append('C:\\Users\\Mayan\\OneDrive\\Documents\\Machine Learning\\End2End Projects')  # Adjust the path accordingly
 import pandas as pd
 from src.exception import CustomException
 from src.logger import logging
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 from data_transformation import DataTransformation, dataclass, DataTransformationConfig
+from src.components.model_trainer import ModelTrainer
+from src.components.model_trainer import ModelTrainerConfig
+
 #from exception import CustomException
 
 @dataclass
@@ -75,10 +78,7 @@ if __name__=="__main__":
         categorical_columns
         )
 
-    print (train_arr)
-    print(test_arr)
-    print(preprocessor_file_path)
     logging.info('Data Transformation is complete')
 
-    #modeltrainer=ModelTrainer()
-    #print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
+    modeltrainer=ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
