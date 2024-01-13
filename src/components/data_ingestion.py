@@ -62,9 +62,9 @@ if __name__=="__main__":
     #parameters for data transformation
     train_path = 'artifacts\\train.csv'
     test_path = 'artifacts\\test.csv'
-    numerical_columns = ["writing score", "reading score"]
-    categorical_columns = ["gender", "race/ethnicity", "parental level of education", "lunch", "test preparation course"]
-    target_column_name = ['math score']
+    numerical_columns = ["writing_score", "reading_score"]
+    categorical_columns = ["gender", "ethnicity", "parental_level_of_education", "lunch", "test_preparation_course"]
+    target_column_name = ['math_score']
 
     logging.info("Parameters initialized successfully")
 
